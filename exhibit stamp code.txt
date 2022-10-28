@@ -1,0 +1,21 @@
+// pdf xchange editor and adobe code
+
+var cAsk = "Enter Exhibit Number" ;
+var cTitle = "Exhibit Number";
+if(event.source.forReal)
+{
+  var cMsg = app.response(cAsk, cTitle);
+  event.value = cMsg;
+}
+
+
+// kofax code
+var cAsk = "Enter Exhibit Number" ;
+var cTitle = "Exhibit Number";
+//if(event.source.forReal && (event.source.stampName == "#UdzyXagRctZoS5p43TZ43C"))
+if(stampState == 'applying')
+{
+  var cMsg = app.response(cAsk, cTitle);
+  event.value = cMsg;
+  //event.source.source.info.exhibit = cMsg;
+}
